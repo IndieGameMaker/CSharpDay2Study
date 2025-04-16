@@ -46,6 +46,8 @@ class GameLogic
         if (string.IsNullOrEmpty(playerName))
         {
             Console.WriteLine("잘못된 이름입니다.");
+            Thread.Sleep(1000);
+            Init(); // 실제로 이렇 사용하시면 않됨, 재귀호출
         }
         else
         {
