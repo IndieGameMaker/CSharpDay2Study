@@ -13,6 +13,7 @@ class Program
 
 class GameLogic
 {
+    private Player _player;
     private bool _isGameOver = false;
 
     public void StartGame()
@@ -46,10 +47,19 @@ class GameLogic
         {
             Console.WriteLine("잘못된 이름입니다.");
         }
+        else
+        {
+
+        }
     }
 }
 
 class Player
 {
+    public string name;
 
+    public Player(string name)
+    {
+        this.name = name;
+    }
 }
