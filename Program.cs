@@ -56,8 +56,24 @@ class GameLogic
         }
 
         // 직업선택
-        Console.WriteLine("직업을 선택하세요. [1:전사 | 2:법사]");
+        Console.WriteLine("직업을 선택하세요. [1:전사 | 2:법사 | 3:궁수]");
         int job = int.Parse(Console.ReadLine());
+
+        if (job >= 1 && job <= 3)  // if (job is >=1 and <=3) 패턴매칭 C# 9.0 ?
+        {
+            switch (job)
+            {
+                case 1:
+                    Console.WriteLine("전사를 선택했습니다.");
+                    break;
+                case 2:
+                    Console.WriteLine("법사를 선택했습니다.");
+                    break;
+                case 3:
+                    Console.WriteLine("궁수를 선택했습니다.");
+                    break;
+            }
+        }
     }
 }
 
