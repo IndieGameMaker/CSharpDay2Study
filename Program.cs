@@ -49,7 +49,8 @@ class GameLogic
         }
         else
         {
-
+            _player = new Player(playerName);
+            Console.WriteLine($"{_player.name}님, 입장하셨습니다.");
         }
     }
 }
