@@ -54,6 +54,10 @@ class GameLogic
             _player = new Player(playerName);
             Console.WriteLine($"{_player.name}님, 입장하셨습니다.");
         }
+
+        // 직업선택
+        Console.WriteLine("직업을 선택하세요. [1:전사 | 2:법사]");
+        int job = int.Parse(Console.ReadLine());
     }
 }
 
