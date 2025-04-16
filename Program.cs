@@ -1,4 +1,5 @@
 ﻿
+
 namespace CSharpDay;
 
 class Program
@@ -12,9 +13,27 @@ class Program
 
 class GameLogic
 {
+    private bool _isGameOver = false;
+
     public void StartGame()
     {
         Init();
+
+        while (!_isGameOver)
+        {
+            InputHandler();
+        }
+
+        Console.WriteLine("게임이 종료되었습니다.");
+    }
+
+    private void InputHandler()
+    {
+        var input = Console.ReadKey();
+        if (input.Key == ConsoleKey.Escape)
+        {
+            _isGameOver = true;
+        }
     }
 
     private void Init()
