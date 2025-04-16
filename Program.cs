@@ -61,16 +61,18 @@ class GameLogic
 
         if (job >= 1 && job <= 3)  // if (job is >=1 and <=3) 패턴매칭 C# 9.0 ?
         {
-            switch (job)
+            _player.job = (Job)job;
+
+            switch (_player.job)
             {
-                case 1:
-                    Console.WriteLine("전사를 선택했습니다.");
+                case Job.Warrior:
+                    Console.WriteLine($"{_player.job}를 선택했습니다.");
                     break;
-                case 2:
-                    Console.WriteLine("법사를 선택했습니다.");
+                case Job.Wizzard:
+                    Console.WriteLine($"{_player.job}를 선택했습니다.");
                     break;
-                case 3:
-                    Console.WriteLine("궁수를 선택했습니다.");
+                case Job.Archor:
+                    Console.WriteLine($"{_player.job}를 선택했습니다.");
                     break;
             }
         }
@@ -80,9 +82,17 @@ class GameLogic
 class Player
 {
     public string name;
+    public Job job;
 
     public Player(string name)
     {
         this.name = name;
     }
+}
+
+public enum Job
+{
+    Warrior = 1,
+    Wizzard,
+    Archor
 }
