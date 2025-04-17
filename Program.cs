@@ -30,7 +30,7 @@ class GameLogic
 
     private void InputHandler()
     {
-        var input = Console.ReadKey();
+        var input = Console.ReadKey(true);
         if (input.Key == ConsoleKey.Escape)
         {
             _isGameOver = true;
